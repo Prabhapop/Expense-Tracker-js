@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Expense Tracker</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #ffe6e6; /* pastel pink background */
+      }
+
+      h1 {
+        color: #ff69b4; /* bright pink title */
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 36px;
+        font-weight: bold;
+        text-shadow: 0 0 10px rgba(255, 105, 180, 0.5); /* pink shadow */
+      }
+
+      form {
+        max-width: 400px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #fff; /* white background */
+        border: 1px solid #ffd7be; /* pastel orange border */
+        box-shadow: 0 0 10px rgba(255, 215, 190, 0.5); /* pastel orange shadow */
+        border-radius: 10px; /* rounded corners */
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        color: #666; /* dark gray label text */
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="number"],
+      select {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ffc107; /* pastel yellow border */
+        border-radius: 5px; /* rounded corners */
+        background-color: #fff; /* white background */
+      }
+
+      input[type="text"]:focus,
+      input[type="number"]:focus,
+      select:focus {
+        border-color: #ff9800; /* bright orange border on focus */
+        box-shadow: 0 0 10px rgba(255, 152, 0, 0.5); /* bright orange shadow on focus */
+      }
+
+      button[type="button"] {
+        background-color: #8bc34a; /* pastel green button */
+        color: #fff; /* white button text */
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px; /* rounded corners */
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      button[type="button"]:hover {
+        background-color: #64dd17; /* bright green button on hover */
+      }
+
+      #expenses-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      #expenses-list li {
+        padding: 10px;
+        border-bottom: 1px solid #ccc; /* light gray border */
+        background-color: #f7f7f7; /* light gray background */
+        border-radius: 5px; /* rounded corners */
+      }
+
+      #expenses-list li:nth-child(even) {
+        background-color: #fff; /* white background for even rows */
+      }
+
+      #expenses-list li:last-child {
+        border-bottom: none;
+      }
+
+      #total-expenses {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333; /* dark gray text */
+        margin-top: 20px;
+        background-color: #ffd7be; /* pastel orange background */
+        padding: 10px;
+        border-radius: 5px; /* rounded corners */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Expense Tracker</h1>
+    <form>
+      <label for="description">Description:</label>
+      <input type="text" id="description" required /><br /><br />
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" required /><br /><br />
+      <label for="category">Category:</label>
+      <select id="category" required>
+        <option value="">Select a category</option>
+        <option value="Food">Food</option>
+        <option value="Transportation">Transportation</option>
+        <option value="Housing">Housing</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Other">Other</option></select
+      ><br /><br />
+      <button id="add-expense-btn">Add Expense</button>
+    </form>
+    <ul id="expenses-list"></ul>
+    <p id="total-expenses"></p>
+
+    <script src="expense-tracker.js"></script>
+  </body>
+</html>
